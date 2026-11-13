@@ -1,4 +1,4 @@
-# Gas Sensor ESP8266 IoT Project: Monitor Gas Levels with KiwisIoT
+# Smart Gas Monitoring System Using ESP8266 and KiwisIoT
 
 An IoT-based gas sensor monitoring project using an **MQ-2 gas sensor**,
 **ESP8266 NodeMCU**, and **KiwisIoT**. The ESP8266 reads the analog
@@ -273,13 +273,9 @@ Save the following code as `esp8266-gas-kiwisiot.ino`.
 
 ![Arduino IDE showing the gas monitoring sketch](images/arduino-ide-code.png)
 
+### coding
+
 ``` cpp
-/*
- * Project: Gas Level Monitoring with ESP8266 and KiwisIoT
- * Project ID: KIWISIOT-006
- * Board: ESP8266 NodeMCU
- * Sensor: MQ-2 Gas Sensor
- */
 
 #include <ESP8266WiFi.h>
 #include <KiwisIoT.h>
