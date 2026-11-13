@@ -11,18 +11,6 @@ remote monitoring.
 > and should not be used as a certified gas-safety or life-safety
 > device.
 
-## Project Highlights
-
--   ESP8266-based gas sensor monitoring
--   MQ-2 gas sensor with analog output
--   Analog reading through the ESP8266 A0 pin
--   Real-time sensor-value monitoring
--   Wi-Fi communication
--   KiwisIoT dashboard integration
--   Gauge widget visualization
--   Serial Monitor output
--   Beginner-friendly IoT project
-
 ## Project Overview
 
 The MQ-2 gas sensor module provides an analog output that changes
@@ -73,19 +61,6 @@ This project is a starting point for:
 -   IoT sensor monitoring
 -   Smart-home project prototypes
 -   Engineering and college IoT projects
-
-## What You'll Learn
-
-By building this project, you will learn how to:
-
--   Connect an MQ-2 gas sensor module to an ESP8266
--   Read an analog sensor using `analogRead()`
--   Observe changing sensor readings
--   Convert a numeric sensor reading into a string
--   Send sensor data from an ESP8266 to KiwisIoT
--   Use a KiwisIoT channel for sensor data
--   Display readings with a Gauge widget
--   Monitor sensor data remotely over Wi-Fi
 
 ## Components Required
 
@@ -159,10 +134,6 @@ path below.
 
 ![MQ-2 gas sensor connected to ESP8266 NodeMCU](images/circuit.png)
 
-### Hardware Setup
-
-![ESP8266 NodeMCU and MQ-2 gas sensor hardware setup](images/hardware-setup.jpeg)
-
 ## How the Gas Sensor Works
 
 The MQ-2 module provides an analog output that can be read by a
@@ -213,6 +184,10 @@ Gauge Widget
 > of raw readings from the reference project. Actual readings depend on
 > the sensor, module, operating conditions, environment, and hardware.
 > They are not calibrated gas concentrations.
+
+### Hardware Setup
+
+![ESP8266 NodeMCU and MQ-2 gas sensor hardware setup](images/hardware-setup.jpeg)
 
 ## KiwisIoT Dashboard Configuration
 
@@ -268,10 +243,6 @@ Keep real credentials in your local project.
 ## Complete Arduino Code
 
 Save the following code as `esp8266-gas-kiwisiot.ino`.
-
-### Arduino IDE
-
-![Arduino IDE showing the gas monitoring sketch](images/arduino-ide-code.png)
 
 ### coding
 
@@ -355,6 +326,10 @@ void loop() {
 8.  Open the Serial Monitor and set the baud rate to **115200**.
 9.  Check that sensor readings appear and that the dashboard receives
     them.
+    
+## Arduino IDE
+
+![Arduino IDE showing the gas monitoring sketch](images/arduino-ide-code.png)
 
 ## Expected Serial Monitor Output
 
@@ -450,12 +425,6 @@ kiwisiot.send("0", gasData);
 The channel configured in the dashboard must match the channel used in
 the code.
 
-### Sensor Values Change Frequently
-
-MQ-2 readings can vary with the sensor, environment, power conditions,
-and surrounding conditions. Check the wiring, power supply, sensor
-placement, and stabilization time.
-
 ## Possible Applications
 
 This project can be used as a starting point for:
@@ -470,16 +439,6 @@ This project can be used as a starting point for:
 It can be extended with LEDs, buzzers, relays, alerts, thresholds,
 additional sensors, and automation logic. This prototype is not a
 substitute for certified gas alarms or safety equipment.
-
-## Future Improvements
-
--   Add LED indicators for configurable sensor-reading ranges.
--   Add a buzzer alert for a configured threshold.
--   Add notifications through an IoT service.
--   Add data logging and historical graphs.
--   Add additional environmental sensors.
--   Implement calibrated gas-concentration estimation with suitable
-    calibration and validation.
 
 ## Project Structure
 
@@ -514,39 +473,6 @@ Related projects listed in the reference include:
 -   ESP8266 Flame Sensor IoT Project
 -   ESP8266 Soil Moisture IoT Project
 
-## Frequently Asked Questions
-
-### What is an MQ-2 gas sensor?
-
-The MQ-2 is a gas sensor module commonly used to detect changes
-associated with combustible gases and smoke.
-
-### Which ESP8266 pin is used in this project?
-
-The MQ-2 module's analog output (AO) is connected to **A0**.
-
-### Which KiwisIoT channel is used?
-
-The project sends the gas sensor reading to **Channel 0**.
-
-### Which dashboard widget is used?
-
-A **Gauge** widget displays the received sensor value.
-
-### Does this project measure gas concentration in PPM?
-
-No. It sends the raw analog sensor reading to KiwisIoT. A calibrated gas
-concentration measurement requires appropriate calibration and
-additional processing.
-
-### How often is the sensor value sent?
-
-The program sends a reading approximately every **two seconds**.
-
-### Can this project be extended?
-
-Yes. LEDs, buzzers, relays, alerts, thresholds, additional sensors, and
-automation logic can be added.
 
 ## Summary
 
@@ -561,10 +487,3 @@ an ESP8266 and monitoring its readings remotely through an IoT platform.
 
 **Remember:** The displayed value is a raw sensor reading, not a
 calibrated gas concentration in PPM or a certified safety measurement.
-
-## License
-
-Add a `LICENSE` file to the repository if you intend to publish this
-project under an open-source license. The reference project specifies
-MIT License; use it only if you intend to release your own project under
-those terms.
